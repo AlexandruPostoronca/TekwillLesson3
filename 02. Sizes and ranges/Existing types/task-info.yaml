@@ -1,0 +1,38 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: int
+    is_correct: true
+  - text: byte
+    is_correct: true
+  - text: short
+    is_correct: true
+  - text: bit
+    is_correct: false
+  - text: big
+    is_correct: false
+  - text: long
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 01 Mar 2024 19:32:29 UTC"
+record: -1
+selected_options:
+  - 0
+  - 1
+  - 2
+  - 5
+custom_name: Existing types
+local_check: true

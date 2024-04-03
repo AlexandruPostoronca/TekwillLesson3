@@ -1,0 +1,37 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: double -> float
+    is_correct: false
+  - text: byte -> char
+    is_correct: false
+  - text: int -> long
+    is_correct: true
+  - text: float -> long
+    is_correct: false
+  - text: char -> int
+    is_correct: true
+  - text: long -> float
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+          public static void main(String[] args) {
+              // Write your solution here
+          }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 01 Mar 2024 19:52:37 UTC"
+record: -1
+selected_options:
+  - 2
+  - 4
+  - 5
+custom_name: Automatically castings
+local_check: true

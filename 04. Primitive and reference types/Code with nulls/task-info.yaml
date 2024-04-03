@@ -1,0 +1,30 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: Only the second line does not work.
+    is_correct: true
+  - text: Both lines work correctly.
+    is_correct: false
+  - text: Only the first line does not work.
+    is_correct: false
+  - text: Both lines do not work.
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 01 Mar 2024 19:58:11 UTC"
+record: -1
+selected_options:
+  - 0
+custom_name: Code with nulls
+local_check: true

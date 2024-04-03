@@ -1,0 +1,126 @@
+<h2>Type casting</h2>
+<p>Suppose you need to assign a value of one type to a variable of another type. To do that, your program needs to cast
+    the source type to the target type. Java provides two kinds of casting for primitive types:
+    <strong> implicit</strong> and <strong>explicit</strong>. The first one is performed automatically by the Java
+    compiler when it is possible, while the second one can only be done by a programmer.</p>
+
+<h4>Implicit casting</h4>
+<p>The compiler automatically performs <strong>implicit casting</strong> when the target type is wider than the source
+    type. The picture below illustrates the direction of this casting. Any value of a given type can be assigned to the
+    one on the right implicitly or below in the case of <code>char</code>.</p>
+<img alt="" src="https://ucarecdn.com/c00fb67e-ba08-44a2-ad8b-0ffbdfe8d642/" width="1400" style="margin: auto">
+
+<p style="text-align: center;"><strong>The direction of implicit primitive type castings</strong></p>
+
+<p>Normally, there is no loss of information when the target type is wider than the source type, for example, when we
+    cast <code>int</code> to <code>long</code>. But it is not possible to automatically cast in the backward order (e.g.
+    from <code>long</code> to <code>int</code> or from <code>double</code> to <code>float</code>).</p>
+
+<div class="alert alert-primary">
+    Note that there is no <code>boolean</code> type on the picture above because it is impossible to cast this type to
+    any other and vice versa.
+</div>
+<p>Here are several examples of implicit castings:</p>
+<ul>
+    <li>
+        <p>from <code>int</code> to <code>long</code>:</p>
+        <pre><code>int num = 100;
+long bigNum = num; // 100L</code></pre>
+    </li>
+    <li>
+        <p>from <code>long</code> to <code>double</code>:</p>
+        <pre><code>long bigNum = 100_000_000L;
+double bigFraction = bigNum; // 100000000.0</code></pre>
+    </li>
+    <li>
+        <p> from <code>short</code> to <code>int</code>:</p>
+        <pre><code>short shortNum = 100;
+int num = shortNum; // 100</code></pre>
+    </li>
+    <li>
+        <p> from <code>char</code> to <code>int</code>:</p>
+        <pre><code>char ch = '?';
+int code = ch; // 63</code></pre>
+    </li>
+</ul>
+
+<p>
+    In some cases, implicit type casting may result in some information loss. When we convert an <code>int</code> to
+    <code>float</code>, or a <code>long</code>to <code>float</code> or to <code>double</code>, we may lose some less
+    significant bits of the value, which will result in a loss of precision. However, the result of this conversion will
+    be a correctly rounded version of the integer value, which will be in the overall range of the target type. To
+    understand that, check out the example:
+</p>
+<pre><code>long bigLong =  1_200_000_002L;
+float bigFloat = bigLong; // 1.2E9 (= 1_200_000_000)</code>
+</pre>
+
+<p>When we convert a <code>char</code> to an <code>int</code> in Java, we actually get the ASCII value for a given
+    character. The ASCII value is an integer representation of English alphabet letters (both uppercase and lowercase),
+    digits, and other symbols. <a href="https://ascii.cl/" rel="noopener noreferrer nofollow" target="_blank">Here</a>
+    you can find some standard symbols in ASCII.
+</p>
+<pre><code>char character = 'a';
+char upperCase = 'A';
+
+int ascii1 = character; // this is 97
+int ascii2 = upperCase; // this is 65</code>
+</pre>
+<div class="alert alert-primary">Strictly speaking, Java uses Unicode Character Representations (UTF-16), which is a
+    superset of ASCII and includes a by far larger set of symbols. However, the numbers 0–127 have the same values in
+    ASCII and Unicode.
+</div>
+<p>As you can see, implicit casting works absolutely transparently.</p>
+
+<h4>Explicit casting</h4>
+<p>The considered <strong>implicit casting</strong> does not work when the target type is narrower than the source type.
+    But programmers can apply <strong>explicit casting</strong> to a source type to get another type they want. It may
+    lose information about the overall magnitude of a numeric value and may also lose precision.</p>
+<p>To perform explicit casting, a programmer must write the target type in parentheses before the source.</p>
+<code>(targetType) source</code>
+
+<p>Any possible casting not presented in the picture above needs such an approach, for example <code>double</code> to
+    <code>int</code>, and <code>long</code> to <code>char</code>.</p>
+
+<p>Examples:</p>
+<pre><code>double d = 2.00003;
+
+// it loses the fractional part
+long l =  (long) d; // 2
+
+// requires explicit casting because long is wider than int
+int i = (int) l; // 2
+
+// requires explicit casting because the result is long (indicated by L)
+int val = (int) (3 + 2L); // 5
+
+// casting from a long literal to char
+char ch = (char) 55L; // '7'</code></pre>
+
+<p>However, the explicit casting may truncate the value because <code>long</code> and <code>double</code> can store a
+    much larger number than <code>int</code>.</p>
+<pre><code>long bigNum = 100_000_000_000_000L;
+int n = (int) bigNum; // 276447232</code></pre>
+<p>Oops! The value has been truncated. This problem is known as <strong>type overflow</strong>. The same problem may
+    occur when casting <code>int</code> to <code>short</code> or <code>byte</code>. Let's see what happens exactly.</p>
+
+<p>As you remember, in Java <code>long</code> is a 64-bit number, while <code>int</code> is 32-bit. When converting
+    <code>long</code> to <code>int</code> the program just takes the last 32 bits to represent the new number. If the
+    <code>long</code> contains a number less than or equal to <code>Integer.MAX_VALUE</code> you can convert it by
+    casting without losing information. Otherwise, the result will be quite meaningless, although determined. That is
+    why you shouldn't perform casting from a larger type to a smaller type unless you are absolutely sure that it is
+    necessary and that truncation will not interfere with your program.
+</p>
+<p>Explicit casting also works when implicit casting is enough.</p>
+<pre><code>int num = 10;
+long bigNum = (long) num; // redundant casting</code>
+</pre>
+<p>But this is redundant and should not be used to avoid unnecessary constructs in your code.</p>
+<div class="alert alert-primary"><strong>Note,</strong> that despite the power of explicit casting, it is still
+    impossible to cast something to and from the <code>boolean</code> type.
+</div>
+
+<h4>Conclusion</h4>
+<p>If you want to cast a narrower type to a wider type, you do not need to write anything, the Java compiler will do it
+    automatically for you. But if you want the opposite, specify the required type in parentheses following the
+    assignment operator. Keep in mind, the <code>boolean</code> type cannot be cast to another type and vice versa.</p>

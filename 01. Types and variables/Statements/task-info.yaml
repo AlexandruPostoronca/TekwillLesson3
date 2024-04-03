@@ -1,0 +1,33 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: A variable can store a value
+    is_correct: true
+  - text: A variable's name can be changed at runtime
+    is_correct: false
+  - text: A variable has a type
+    is_correct: true
+  - text: A variable has a name (identifier)
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 01 Mar 2024 19:20:02 UTC"
+record: -1
+selected_options:
+  - 0
+  - 2
+  - 3
+custom_name: Statements
+local_check: true

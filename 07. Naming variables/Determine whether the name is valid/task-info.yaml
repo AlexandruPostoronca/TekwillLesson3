@@ -1,0 +1,31 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: This name is not valid because it is a keyword.
+    is_correct: true
+  - text: This name is not valid because it starts with a letter.
+    is_correct: false
+  - text: This name is not valid because it does not make sense for humans (what is
+      int?)
+    is_correct: false
+  - text: This is a valid name.
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 03 Mar 2024 22:42:28 UTC"
+record: -1
+selected_options:
+  - 0
+custom_name: Determine whether the name is valid
+local_check: true

@@ -1,0 +1,30 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "float - 4 bytes, double - 8 bytes"
+    is_correct: true
+  - text: "float - 2 bytes, double - 8 bytes"
+    is_correct: false
+  - text: "float - 8 bytes, double - 16 bytes"
+    is_correct: false
+  - text: "float - 8 bytes, double - 4 bytes"
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 01 Mar 2024 19:33:13 UTC"
+record: -1
+selected_options:
+  - 0
+custom_name: Sizes of float and double
+local_check: true

@@ -1,0 +1,36 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: "byte: from -128 to 128"
+    is_correct: false
+  - text: "short: from -32768 to 32768"
+    is_correct: false
+  - text: "byte: from 0 to 255"
+    is_correct: false
+  - text: "short: from -32768 to 32767"
+    is_correct: true
+  - text: "short: from 0 to 65535"
+    is_correct: false
+  - text: "byte: from -128 to 127"
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 01 Mar 2024 19:34:02 UTC"
+record: -1
+selected_options:
+  - 3
+  - 5
+custom_name: Ranges
+local_check: true

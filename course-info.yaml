@@ -1,0 +1,26 @@
+title: 03. Data Types and Variables
+language: English
+summary: |-
+  This is an introductory course about Operations on primitive types:
+  - 01. Scanning the input
+  - 02. Arithmetic operations
+  - 03. Bitwise and bit-shift operations
+  - 04. Logical operations
+  - 05. Relational operators
+  - 06. Infinity and Not a Number
+  - 07. Increment and decrement
+programming_language: Java
+programming_language_version: 17
+content:
+  - 01. Types and variables
+  - 02. Sizes and ranges
+  - 03. Type casting
+  - 04. Primitive and reference types
+  - 05. Final variables
+  - 06. Coding style conventions
+  - 07. Naming variables
+mode: Study
+environment_settings:
+  jvm_language_level: JDK_17
+vendor:
+  name: Alexandru Umanet

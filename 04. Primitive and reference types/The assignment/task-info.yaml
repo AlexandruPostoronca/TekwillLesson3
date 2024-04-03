@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: The variables c and d have reference to the same value "abc".
+    is_correct: true
+  - text: The variables c and d store the same value "abc".
+    is_correct: false
+  - text: The variables a and b have reference to the same value 100.
+    is_correct: false
+  - text: The variables a and b store the same value 100.
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+          public static void main(String[] args) {
+              // Write your solution here
+          }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 04 Mar 2024 16:36:46 UTC"
+record: -1
+selected_options:
+  - 0
+  - 3
+custom_name: The assignment
+local_check: true

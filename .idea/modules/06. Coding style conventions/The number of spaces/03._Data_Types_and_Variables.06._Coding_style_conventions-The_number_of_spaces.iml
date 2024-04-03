@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":06._Coding_style_conventions-The_number_of_spaces" external.linked.project.path="$MODULE_DIR$/../../../../06. Coding style conventions/The number of spaces" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="03._Data_Types_and_Variables" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../06. Coding style conventions/The number of spaces">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../06. Coding style conventions/The number of spaces/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../06. Coding style conventions/The number of spaces/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../06. Coding style conventions/The number of spaces/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

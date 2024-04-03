@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/01. Types and variables/Animal" />
+            <option value="$PROJECT_DIR$/01. Types and variables/Assignments" />
+            <option value="$PROJECT_DIR$/01. Types and variables/Fill the declaration" />
+            <option value="$PROJECT_DIR$/01. Types and variables/Incorrect counter" />
+            <option value="$PROJECT_DIR$/01. Types and variables/Invalid declaration of variables" />
+            <option value="$PROJECT_DIR$/01. Types and variables/Statements" />
+            <option value="$PROJECT_DIR$/01. Types and variables/The assignment operator" />
+            <option value="$PROJECT_DIR$/01. Types and variables/The name of a variable" />
+            <option value="$PROJECT_DIR$/01. Types and variables/Theory" />
+            <option value="$PROJECT_DIR$/02. Sizes and ranges/Existing types" />
+            <option value="$PROJECT_DIR$/02. Sizes and ranges/Ranges" />
+            <option value="$PROJECT_DIR$/02. Sizes and ranges/Sizes of float and double" />
+            <option value="$PROJECT_DIR$/02. Sizes and ranges/The range of byte" />
+            <option value="$PROJECT_DIR$/02. Sizes and ranges/The size of long" />
+            <option value="$PROJECT_DIR$/02. Sizes and ranges/The size of primitive types" />
+            <option value="$PROJECT_DIR$/02. Sizes and ranges/Theory" />
+            <option value="$PROJECT_DIR$/03. Type casting/Automatically castings" />
+            <option value="$PROJECT_DIR$/03. Type casting/Casting a long variable" />
+            <option value="$PROJECT_DIR$/03. Type casting/Casting int to other types" />
+            <option value="$PROJECT_DIR$/03. Type casting/Converting an expression" />
+            <option value="$PROJECT_DIR$/03. Type casting/Impossible implicit castings" />
+            <option value="$PROJECT_DIR$/03. Type casting/Number casting" />
+            <option value="$PROJECT_DIR$/03. Type casting/Possible implicit castings" />
+            <option value="$PROJECT_DIR$/03. Type casting/Statements" />
+            <option value="$PROJECT_DIR$/03. Type casting/The right syntax of explicit casting" />
+            <option value="$PROJECT_DIR$/03. Type casting/Theory" />
+            <option value="$PROJECT_DIR$/03. Type casting/Where explicit casting is required" />
+            <option value="$PROJECT_DIR$/04. Primitive and reference types/Code with nulls" />
+            <option value="$PROJECT_DIR$/04. Primitive and reference types/Creating a primitive" />
+            <option value="$PROJECT_DIR$/04. Primitive and reference types/Creating a reference type" />
+            <option value="$PROJECT_DIR$/04. Primitive and reference types/Null syntax" />
+            <option value="$PROJECT_DIR$/04. Primitive and reference types/Statements" />
+            <option value="$PROJECT_DIR$/04. Primitive and reference types/The assignment" />
+            <option value="$PROJECT_DIR$/04. Primitive and reference types/Theory" />
+            <option value="$PROJECT_DIR$/04. Primitive and reference types/What does a reference type store" />
+            <option value="$PROJECT_DIR$/05. Final variables/Almost final variables" />
+            <option value="$PROJECT_DIR$/05. Final variables/Creating a constant" />
+            <option value="$PROJECT_DIR$/05. Final variables/Erroneous lines" />
+            <option value="$PROJECT_DIR$/05. Final variables/Theory" />
+            <option value="$PROJECT_DIR$/05. Final variables/Zero, one or more" />
+            <option value="$PROJECT_DIR$/06. Coding style conventions/A program by conventions" />
+            <option value="$PROJECT_DIR$/06. Coding style conventions/Code style for a project" />
+            <option value="$PROJECT_DIR$/06. Coding style conventions/Code with style issues" />
+            <option value="$PROJECT_DIR$/06. Coding style conventions/Our convention" />
+            <option value="$PROJECT_DIR$/06. Coding style conventions/The number of spaces" />
+            <option value="$PROJECT_DIR$/06. Coding style conventions/Theory" />
+            <option value="$PROJECT_DIR$/07. Naming variables/Determine whether the name is valid" />
+            <option value="$PROJECT_DIR$/07. Naming variables/The best name for a variable" />
+            <option value="$PROJECT_DIR$/07. Naming variables/The first symbol of a name" />
+            <option value="$PROJECT_DIR$/07. Naming variables/The last symbol of a name" />
+            <option value="$PROJECT_DIR$/07. Naming variables/Theory" />
+            <option value="$PROJECT_DIR$/07. Naming variables/Valid and invalid names" />
+            <option value="$PROJECT_DIR$/07. Naming variables/Valid and invalid names 2" />
+            <option value="$PROJECT_DIR$/07. Naming variables/Valid and invalid names 3" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

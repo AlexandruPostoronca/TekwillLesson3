@@ -1,0 +1,42 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: char is 16 bits
+    is_correct: true
+  - text: char is 32 bits
+    is_correct: false
+  - text: short is 32 bits
+    is_correct: false
+  - text: byte is 8 bits
+    is_correct: true
+  - text: long is 64 bits
+    is_correct: true
+  - text: long is 128 bits
+    is_correct: false
+  - text: int is 32 bits
+    is_correct: true
+  - text: int is 16 bits
+    is_correct: false
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 01 Mar 2024 19:30:14 UTC"
+record: -1
+selected_options:
+  - 0
+  - 3
+  - 4
+  - 6
+custom_name: The size of primitive types
+local_check: true

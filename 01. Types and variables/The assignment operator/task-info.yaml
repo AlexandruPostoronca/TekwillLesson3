@@ -1,0 +1,30 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: <-
+    is_correct: false
+  - text: =
+    is_correct: true
+  - text: :=
+    is_correct: false
+  - text: ->
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 01 Mar 2024 19:17:01 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: The assignment operator
+local_check: true

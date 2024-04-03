@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "No style is needed, every time you write code as you can to save the time\
+    \ and effort"
+    is_correct: false
+  - text: All programmers write code in the same style following one of generally accepted
+      coding style guides
+    is_correct: true
+  - text: Every programmer has their own unique but consistent coding style
+    is_correct: false
+  - text: Create your own style and follow it consistently
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 03 Mar 2024 22:32:47 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: Code style for a project
+local_check: true

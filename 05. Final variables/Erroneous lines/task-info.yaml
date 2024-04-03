@@ -1,0 +1,30 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: COUNT_OF_APPLES = 40;COUNT_OF_APPLES += 10;
+    is_correct: true
+  - text: System.out.println(COUNT_OF_APPLES);
+    is_correct: true
+  - text: COUNT_OF_APPLES = 30;
+    is_correct: false
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 03 Mar 2024 22:20:51 UTC"
+record: -1
+selected_options:
+  - 0
+  - 1
+custom_name: Erroneous lines
+local_check: true

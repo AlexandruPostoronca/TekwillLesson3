@@ -1,0 +1,140 @@
+<h2>Coding style conventions</h2>
+<p>There's a question that you bump into when moving from simple single-line programs to more complicated ones: how to
+    write code that is clean and easy to read? This is trickier than it may seem at the beginning, and this is quite
+    important: in real life, programming is a process that involves a lot of people that work together. In fact, you
+    often spend more time reading code than writing it. Even when you're working alone and writing a program "for
+    yourself", after a while, it may become difficult for you to understand your own program if it's badly written. </p>
+<p>That is why you need to follow common best practices concerning programming style. This way, other programmers and
+    yourself can read your code easily. Writing good code may help you get your first job and make a good impression on
+    your colleagues.</p>
+
+<div class="alert alert-primary">Good coding style is like correct punctuation: you can manage without it,
+    butitsuremakesthingseasiertoread. – The Tidyverse Style Guide by Hadley Wickham
+</div>
+
+<h4>Java Conventions</h4>
+<p>A list of recommendations on how to write code for some particular language is usually called a <strong>coding style
+    guide</strong> or <strong>style conventions</strong>. The conventions help developers standardize and support
+    well-readable code. They are more like recommendations than strict rules, but by following them a programmer creates
+    code that is clean and consistent so that other developers will be happy to work with it.</p>
+<p>In most cases, companies and individual developers do not create their own style conventions. There are two generally
+    accepted Java conventions that are used all over the world:</p>
+<ul>
+    <li><a href="https://www.oracle.com/technetwork/java/codeconventions-150003.pdf" rel="noopener noreferrer nofollow"
+           target="_blank">Oracle Code Conventions</a></li>
+    <li><a href="https://google.github.io/styleguide/javaguide.html" rel="noopener noreferrer nofollow" target="_blank">Google
+        Style Guide</a></li>
+</ul>
+<p>Sometimes they could be modified or extended by a particular company to meet their needs.</p>
+
+<div class="alert alert-primary">In all our code examples and exercises, we will follow the <a
+        href="https://www.oracle.com/technetwork/java/codeconventions-150003.pdf" rel="noopener noreferrer nofollow"
+        target="_blank">Oracle Code Conventions</a> and we urge you to do the same while learning here. After completing
+    the course, you can follow any conventions you want. Actually, it doesn't really matter which one to follow, the
+    main point is to be consistent across your code.
+</div>
+<p>There is no need to learn all the conventions at once: just remember to open them from time to time after learning
+    some new syntactic concepts. We will provide the information throughout the course when needed.</p>
+<p>Now let's look at some of the most basic Java conventions according to the <a
+        href="https://www.oracle.com/technetwork/java/codeconventions-150003.pdf" rel="noopener noreferrer nofollow"
+        target="_blank">Oracle Code Conventions</a>.</p>
+
+<h4>The number of spaces</h4>
+<p>The first convention is to use 4 spaces as the unit of indentation in the whole program code. You have already seen
+    our code examples before and you might note that we used this value there.</p>
+<p>Good:</p>
+<pre><code>public class NumberOfSpacesExample {
+
+    public static void main(String[] args) {
+        System.out.println("Hi!");
+        System.out.println("I'm a Java program.");
+    }
+}</code></pre>
+<p>Very bad:</p>
+<pre><code>public class NumberOfSpacesExample {
+
+  public static void main(String[] args) {
+     System.out.println("Hi!");
+   System.out.println("I'm a Java program.");
+ }
+}</code></pre>
+<p>As you can see, the second code example – with its irregular indentation – looks ugly and requires some effort to be
+    read.</p>
+
+<div class="alert alert-primary">Sometimes tabulation is used to create an indentation. However, <code>tab</code> may
+    correspond to 8 spaces instead of 4 in some IDEs, that is why we recommend you stick to spaces in this course.
+</div>
+
+<h4>The location of curly braces</h4>
+<p>Some time ago, developers were arguing a lot about where to put opening and closing curly braces in C-like
+    programming languages. The next convention describes what to do in Java:</p>
+<ol>
+    <li>Put the <strong>opening curly brace</strong> at the <strong>end of the line</strong> where the block begins.
+    </li>
+    <li>Put the <strong>closing curly brace</strong> at the <strong>beginning of the next line</strong>.</li>
+</ol>
+<p>There are two examples below which illustrate these rules.</p>
+<p>Good:</p>
+<pre><code>public class NumberOfSpacesExample {
+
+    public static void main(String[] args) {
+        System.out.println("Hi!");
+        System.out.println("I'm a Java program.");
+    }
+}</code></pre>
+<p>Not that bad, but not Java-way:</p>
+<pre><code>public class NumberOfSpacesExample 
+{
+    public static void main(String[] args) 
+    {
+        System.out.println("Hi!");
+        System.out.println("I'm a Java program.");
+    }
+}</code></pre>
+<p>Here, the second code example doesn't look ugly, but it is just not how it is generally done in Java. Most of the
+    common conventions follow the first example.</p>
+
+<h4>Avoid extra spaces</h4>
+<p>Sometimes you may add some spaces even if you don't really need them. This will reduce the readability of your
+    code.</p>
+<ul>
+    <li><strong>Avoid extra spaces within parentheses.</strong></li>
+</ul>
+<p>Good:</p>
+<pre><code>System.out.println("Hello!");</code></pre>
+<p>Bad:</p>
+<pre><code>System.out.println( "Hello!" );</code></pre>
+<ul>
+    <li><strong>Avoid an extra space before an open parenthesis.</strong></li>
+</ul>
+<p>Good:</p>
+<pre><code>System.out.println("OK");</code></pre>
+<p>Bad:</p>
+<pre><code>System.out.println ("Shifted braces");</code></pre>
+<ul>
+    <li><strong>Avoid extra spaces before a semicolon:</strong></li>
+</ul>
+<p>Good:</p>
+<pre><code>System.out.println("No extra spaces");</code></pre>
+<p>Bad:</p>
+<pre><code>System.out.println("It has an extra space") ;</code></pre>
+
+<h4>The length of a line</h4>
+<p>The last recommendation concerns the maximum length of a line. The <a
+        href="https://www.oracle.com/technetwork/java/codeconventions-150003.pdf" rel="noopener noreferrer nofollow"
+        target="_blank">Oracle Code Conventions</a> propose avoiding lines longer than 80 characters. Plenty of
+    developers consider this restriction as outdated since modern monitors can easily display longer lines, whereas
+    others would go on following this rule, which is handy, for example, if laptops are used.</p>
+
+<p>Other popular limit values are 100, 120, and sometimes even 140 characters.</p>
+<p><strong>Inellij</strong> is using 120 by default.</p>
+
+<h4>Conclusion</h4>
+<p>Style guides provide the conventions to help create well-readable and consistent code. For Java, the two most popular
+    ones are the Oracle Code Conventions and Google style guide. One of their main objectives is to provide an effective
+    way for developers to work together on code. Because of that, it is not as important to strictly follow one of the
+    existing style guides as to stay consistent within the project. Later on, you will learn a lot of things about Java
+    and become a skillful programmer, but maintaining the code style will always remain important. Do not worry, though:
+    you do not need to learn all the conventions at once. In all the following topics, we will follow the Oracle Code
+    Conventions and encourage you to do it with us!</p>
+

@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "NULL"
+    is_correct: false
+  - text: nil
+    is_correct: false
+  - text: "Null"
+    is_correct: false
+  - text: NaN
+    is_correct: false
+  - text: "null"
+    is_correct: true
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 01 Mar 2024 20:00:25 UTC"
+record: -1
+selected_options:
+  - 4
+custom_name: Null syntax
+local_check: true

@@ -1,0 +1,220 @@
+<h2>Sizes and ranges</h2>
+<p>This topic teaches the classification and properties of primitive types provided by Java. Maybe you already know some
+    of them. There are several groups of basic types divided by meaning. Types from the same group operate similarly,
+    but they have different sizes and, as a result, represent different ranges of values.</p>
+<p>You do not need to know all this information by heart because it is easy to find it in the documentation or Google
+    it. But a common understanding of these concepts is essential in job interviews and practice.</p>
+
+<h4>Numbers</h4>
+<p>Java provides several types for <strong>integers</strong> and <strong>fractional</strong> numbers. These types are
+    often used in arithmetic expressions.</p>
+<p><strong>Integer numbers</strong> (0, 1, 2, ...) are represented by the following four types: <code
+>long</code>, <code>int</code>, <code>short</code>, and <code>byte</code>(from the largest to the smallest). These types
+    have different sizes and may represent different ranges of values. The range of an integer type is calculated as
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+            <mrow>
+                <mo>−</mo>
+                <mo stretchy="false">(</mo>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>−</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msup>
+                <mo stretchy="false">)</mo>
+            </mrow>
+        </semantics>
+    </math>
+    to
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <semantics>
+            <mrow>
+                <mo stretchy="false">(</mo>
+                <msup>
+                    <mn>2</mn>
+                    <mrow>
+                        <mi>n</mi>
+                        <mo>−</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </msup>
+                <mo stretchy="false">)</mo>
+                <mo>−</mo>
+                <mn>1</mn>
+            </mrow>
+        </semantics>
+    </math>
+    , where
+    <em>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <semantics>
+                <mrow>
+                    <mi>n</mi>
+                </mrow>
+            </semantics>
+        </math>
+    </em> is the number of bits. The range includes 0, so we subtract 1 from the upper bound.
+</p>
+<ul>
+    <li>
+        <p><code>byte</code>: size 8 bits (1 byte), ranging from
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                    <mrow>
+                        <mo>−</mo>
+                        <mn>128</mn>
+                    </mrow>
+                </semantics>
+            </math>
+            to
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                    <mrow>
+                        <mn>127</mn>
+                    </mrow>
+                </semantics>
+            </math>
+            ;
+        </p>
+    </li>
+    <li>
+        <p><code>short</code>: size 16 bits (2 bytes), ranging from
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                    <mrow>
+                        <mo>−</mo>
+                        <mn>32768</mn>
+                    </mrow>
+                </semantics>
+            </math>
+            to
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                    <mrow>
+                        <mn>32767</mn>
+                    </mrow>
+                </semantics>
+            </math>
+            ;
+        </p>
+    </li>
+    <li>
+        <p><code>int</code>: size 32 bits (4 bytes), ranging from
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                    <mrow>
+                        <mo>−</mo>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                            <mn>2</mn>
+                            <mn>31</mn>
+                        </msup>
+                        <mo stretchy="false">)</mo>
+                    </mrow>
+                </semantics>
+            </math>
+            to
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                    <mrow>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                            <mn>2</mn>
+                            <mn>31</mn>
+                        </msup>
+                        <mo stretchy="false">)</mo>
+                        <mo>−</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </semantics>
+            </math>
+            ;
+        </p>
+    </li>
+    <li>
+        <p><code>long</code>: size 64 bits (8 bytes), ranging from
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                    <mrow>
+                        <mo>−</mo>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                            <mn>2</mn>
+                            <mn>63</mn>
+                        </msup>
+                        <mo stretchy="false">)</mo>
+                    </mrow>
+                </semantics>
+            </math>
+            to
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                    <mrow>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                            <mn>2</mn>
+                            <mn>63</mn>
+                        </msup>
+                        <mo stretchy="false">)</mo>
+                        <mo>−</mo>
+                        <mn>1</mn>
+                    </mrow>
+                </semantics>
+            </math>
+            .
+        </p>
+    </li>
+</ul>
+<p>The sizes of types are always the same. They do not depend on the operating system or hardware and cannot be changed.
+</p>
+<p>The most commonly used integer types are <code>int</code> and <code>long</code>. Try to use <code>int</code>
+    if it suits your purposes. Otherwise, use <code>long</code>.</p>
+<pre><code>int one = 1;
+long million = 1_000_000L;</code>
+</pre>
+<p><strong>Floating-point types</strong> represent numbers with fractional parts. Java has two such types:
+    <code>double</code> (64 bits) and<code>float</code> (32 bits). These types can store only a limited number of
+    significant decimal digits (~6-7 for <code>float</code> and ~14-16 for <code>double</code>). Usually, you will use
+    the <code>double</code>type in practice.
+</p>
+<pre><code>double pi = 3.1415;
+float e = 2.71828f;</code></pre>
+<p>When you declare and initialize a<code>float</code> variable, mark the assigned value with the special letter
+    <code>f</code>. Similarly, a <code>long</code> value is marked with the letter <code>L</code>.</p>
+
+<h4>Characters</h4>
+<p>Java has a type named <code>char</code> to represent letters (uppercase and lowercase), digits, and other symbols.
+    Each character is just a single letter enclosed in single quotes. This type has the same size as the
+    <code>short</code> type (2 bytes = 16 bits).</p>
+<pre><code>char lowerCaseLetter = 'a';
+char upperCaseLetter = 'Q';
+char dollar = '$';</code>
+</pre>
+<p>Characters represent symbols from many alphabets, including hieroglyphs and other special symbols.</p>
+
+<h4>Booleans</h4>
+<p>Java provides a type called <code>boolean</code>, which can store only two values: <code>true</code> and
+    <code>false</code>. It represents only one bit of information, but its size is not precisely defined.</p>
+
+<pre><code>boolean enabled = true;
+boolean bugFound = false;</code>
+</pre>
+<p>You will often use this type in conditionals and as a result of comparing two numbers.</p>
+
+<h4>Conclusion</h4>
+<ul>
+    <li>There are several types of integers and fractional numbers;</li>
+    <li>
+        Integer numbers are represented by <code>long</code>,<code>int</code>, <code>short</code>, and <code>byte</code>;
+    </li>
+    <li>
+        Floating-point types represent numbers with fractional parts: <code>double</code> (64 bits) and
+        <code>float</code> (32 bits);
+    </li>
+    <li><code>char</code> type represents letters (uppercase and lowercase), digits, and other symbols;</li>
+    <li><code>boolean</code> stores only <code>true</code> and <code>false</code> values.</li>
+</ul>
+<p>Remember that knowledge of sizes and ranges of data types may help you with interviews.</p>

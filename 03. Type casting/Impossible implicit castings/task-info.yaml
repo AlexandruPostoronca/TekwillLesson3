@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: char
+    is_correct: false
+  - text: int
+    is_correct: false
+  - text: float
+    is_correct: false
+  - text: double
+    is_correct: true
+  - text: long
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 01 Mar 2024 19:39:34 UTC"
+record: -1
+selected_options:
+  - 3
+custom_name: Impossible implicit castings
+local_check: true

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":06._Coding_style_conventions-Code_style_for_a_project" external.linked.project.path="$MODULE_DIR$/../../../../06. Coding style conventions/Code style for a project" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="03._Data_Types_and_Variables" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../06. Coding style conventions/Code style for a project">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../06. Coding style conventions/Code style for a project/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../06. Coding style conventions/Code style for a project/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../06. Coding style conventions/Code style for a project/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

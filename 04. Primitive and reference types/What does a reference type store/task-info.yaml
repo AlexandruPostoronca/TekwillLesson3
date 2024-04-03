@@ -1,0 +1,30 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: the code of an object
+    is_correct: false
+  - text: the address of data
+    is_correct: true
+  - text: nothing
+    is_correct: false
+  - text: an actual value
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 01 Mar 2024 20:09:06 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: What does a reference type store
+local_check: true

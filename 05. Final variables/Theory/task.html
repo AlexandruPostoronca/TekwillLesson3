@@ -1,0 +1,110 @@
+<h2>Final variables</h2>
+<p>Sometimes, you need to use a variable that should not be modified during the program. Such variables are known as
+    <strong>constants</strong>. Java provides a special keyword called <code>final</code> to declare them. The only
+    difference between a regular variable and a final variable is that we cannot modify the value of a final variable
+    once assigned. Hence, final variables must be used only for the values that we want to remain
+    <strong>constant</strong> throughout the execution of the program.</p>
+
+<h4>Final variables</h4>
+<p>The following code demonstrates two final variables: <code>PI</code> which represents a well-known math constant and
+    <code>HELLO_MSG</code>which represents a string text.</p>
+<pre><code>final double PI = 3.1415;
+final String HELLO_MSG = "Hello";
+
+System.out.println(PI); // 3.1415
+System.out.println(HELLO_MSG); // Hello</code>
+</pre>
+<p>Both variables cannot be modified since they are marked as final, but they can be accessed as many times as we need
+    it.</p>
+<p>A good practice is to represent a final variable in all caps using an underscore to separate words. It allows you to
+    distinguish them from regular variables. But sometimes you will also see final variables, written in lowercase: this
+    is also admissible for <strong>local final variables</strong>.</p>
+<div class="alert alert-warning">
+    Note, that the compiler will produce an error when trying to modify the value of a final variable.
+</div>
+<p>Here is an example:</p>
+<pre><code>final double PI = 3.1415;
+PI = 3.1416; // error line</code></pre>
+<p>The Java compiler outputs the message: <code>cannot assign a value to final variable 'PI'</code>.</p>
+
+<div class="alert alert-warning">
+    Important, if a final variable has not been assigned before using it, the compiler also will produce an error
+    <code>"variable might not have been initialized"</code>.
+</div>
+<p>Here is an example:</p>
+<pre><code>final boolean FALSE;
+System.out.println(FALSE); // error line</code>
+</pre>
+<p>To fix it, just assign a value before accessing the value of a final variable:</p>
+<pre><code>final boolean FALSE;       // not initialized
+FALSE = false;             // initialized
+System.out.println(FALSE); // no errors here</code>
+</pre>
+<p>Notice that the value of a final variable can be reassigned to a regular variable without any restrictions:</p>
+<pre><code>final int count = 10;
+int cnt = count;
+cnt = 20; // no errors here, cnt is not final</code>
+</pre>
+<p>The value of a regular variable can be changed any time as always.</p>
+
+<h4>Final reference variables</h4>
+<p>The <code>final</code> keyword can be legally used with reference variables. In this case, the final keyword means
+    that it is not possible to reassign a reference to the variable.</p><p>Here is an example with the
+    <code>StringBuilder</code> class which is a mutable version of <code>String</code>.
+</p>
+
+<pre><code>final StringBuilder builder = new StringBuilder();
+builder = new StringBuilder(); // error line</code>
+</pre>
+<p>In this code, the second line won't compile since we are trying to reassign a reference to the final variable
+    <code>builder</code>. But there is one important point.</p>
+
+<div class="alert alert-warning">Note, that it is always possible to change the internal state of an object pointed
+    at by a final reference variable, i.e. the constant is only the variable itself (the reference), not the object to
+    which it refers.
+</div>
+<p>So, the following code is absolutely correct:</p>
+<pre><code>final StringBuilder builder = new StringBuilder(); // ""
+builder.append("Hello!"); // it works
+System.out.println(builder.toString()); // Hello!</code>
+</pre>
+<p>
+    As you can see, this code changed the internal state of an object (<code>""</code> → <code>"Hello!"</code>)
+    referenced by a final variable. When we invoked the <code>append()</code> method we changed not the object itself
+    but just the value of its fields. The <code>append()</code> method is one of the main operations on a
+    <code>StringBuilder</code> that are not available in <code>String</code>. It converts its argument to a
+    <code>String</code> and then appends its characters to the character sequence. We will discuss the
+    <code>StringBuilder</code> class and its methods in further topics.
+</p>
+<p>
+    Since Java 11, it is also possible to use<code>final</code> with <code>var</code> to use automatic type inference
+    for a constant variable.
+</p>
+<pre><code>final var FINAL_VAR = 10; // int
+final var MSG = "Hello!"; // String</code></pre>
+
+<h4>When to use final variables</h4>
+<p>We hope you understand how the <code>final</code> keyword works for local variables. Now it's time to figure out when
+    to use it.</p><p>Some programmers mark all variables that they do not want to modify as <code>final</code>. In this
+    case, the program will contain a lot of such variables.
+</p>
+<pre><code>final Scanner scanner = new Scanner(System.in);
+final int a = scanner.nextInt();
+final int b = scanner.nextInt();
+System.out.println(a + b);</code>
+</pre>
+<p>This approach allows you to write programs with the minimum number of mutable variables which usually leads to fewer
+    errors. In addition, the Java compiler can optimize code with final variables effectively and your program can be a
+    little faster. But this is not always predictable behavior and needs some advanced knowledge.
+</p>
+<p>There is also a counterargument: massive use of the <code>final</code> keyword makes your code less readable (
+    <a href="https://en.wikipedia.org/wiki/Boilerplate_code" rel="noopener noreferrer nofollow" target="_blank">
+        boilerplate code</a>).
+</p>
+<p>Thus, in our learning examples, we will not always write the <code>final</code> keyword, but sometimes you will see
+    such examples. In your solutions, you can write or avoid this keyword. During your real work as a programmer, we
+    hope that the issue of using finals will be standardized for all programmers in the project.
+</p>
+<div class="alert alert-primary">Interestingly, the <code>final</code> keyword can also be used in some different
+    contexts, not only for declaring constants. We will learn other ways to use this keyword in the next topics.
+</div>

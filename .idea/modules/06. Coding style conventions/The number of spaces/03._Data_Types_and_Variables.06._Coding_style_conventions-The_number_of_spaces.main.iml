@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":06._Coding_style_conventions-The_number_of_spaces:main" external.linked.project.path="$MODULE_DIR$/../../../../06. Coding style conventions/The number of spaces" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="03._Data_Types_and_Variables" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../../06. Coding style conventions/The number of spaces/out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../06. Coding style conventions/The number of spaces/src">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../06. Coding style conventions/The number of spaces/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="03._Data_Types_and_Variables.util.main" />
+  </component>
+</module>

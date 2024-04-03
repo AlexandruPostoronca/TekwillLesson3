@@ -1,0 +1,33 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: Any digit (0..9)
+    is_correct: false
+  - text: Dollar sign ($)
+    is_correct: true
+  - text: Underscore (_)
+    is_correct: true
+  - text: Letter of the Latin alphabet (a..z)
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 03 Mar 2024 22:47:51 UTC"
+record: -1
+selected_options:
+  - 1
+  - 2
+  - 3
+custom_name: The first symbol of a name
+local_check: true
